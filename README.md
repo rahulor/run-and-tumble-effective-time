@@ -2,4 +2,4 @@
 Run-&amp;-tumble motion using SVM. Optimal weights are non-zero only for the most recent history of the signal, implying and effective measurement time.
 
 
-![sp](figurer_for_readme/figure0)
+![sp](figure_for_readme/figure0.pdf)
