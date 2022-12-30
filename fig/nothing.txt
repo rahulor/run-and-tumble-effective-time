@@ -1,0 +1,2 @@
+- This directory is currently empty.
+- Figures will be saved to this directory during the run.
