@@ -1,0 +1,92 @@
+\documentclass{article}
+\usepackage[tmargin=0.2in, lmargin=0.15in, rmargin=0.1in]{geometry}
+\usepackage{fancyvrb}
+\usepackage{floatrow}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\title{\huge Run-and-tumble motion \\ \large weight profile and $T_{\mathrm{eff}}$}
+\date{\today}
+\begin{document}
+\include{data/doc_macro}
+\maketitle
+
+\noindent\hrulefill
+\VerbatimInput{inputs.py}
+\noindent\hrulefill
+
+\begin{minipage}{0.55\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=1.0]{fig/conc_profile\figext}
+\caption{Concentration profile}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+\VerbatimInput{data/conc_profile.txt}
+\end{minipage}\hfill
+
+\begin{minipage}{0.48\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=1.0]{fig/init_position\figext}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=1.]{fig/trajectory\figext}
+\end{figure}
+\end{minipage}\hfill
+
+
+\begin{figure}[H]
+\includegraphics[scale=1.0]{fig/signal\figext}
+\caption{sample signal, normalized ---  $s(t)/\langle s \rangle$.}
+\hfill
+\end{figure}
+
+\section*{weight profiles (all)}
+
+\begin{figure}[H]
+\begin{center}
+\hspace*{-1cm}\includegraphics[scale=1.2]{fig/weights_grid.pdf}
+\end{center}
+\caption{weights}
+\end{figure}
+
+\section*{Accuracy (score)}
+\begin{figure}[H]
+\includegraphics[scale=1.0]{fig/score\figext}
+\end{figure}
+
+\section*{weight profiles (grouped)}
+
+\begin{figure}[H]
+\begin{center}
+\hspace*{-1cm}\includegraphics[scale=1.2]{fig/weights_grouped_all\figext}
+\end{center}
+\caption{weights grouped by $\lambda$}
+\end{figure}
+
+\section*{Effective kernel time, $T_\mathrm{eff}$}
+
+\begin{minipage}{0.55\textwidth}
+\begin{figure}[H]
+\includegraphics[scale=1.0]{fig/T_eff_all\figext}
+\end{figure}
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+\begin{equation*}
+T_{\mathrm{eff}} = \alpha \, (D_{\mathrm{rot}})^m
+\end{equation*}
+\VerbatimInput{data/fit_parameters.txt}
+\end{minipage}\hfill
+
+
+\section*{for manuscript | figure3.eps}
+\begin{figure}[H]
+\includegraphics[scale=1.0]{figure3\figext}
+\end{figure}
+\thispagestyle{empty}
+\end{document}
+

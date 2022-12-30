@@ -1,0 +1,29 @@
+\documentclass[crop,tikz]{standalone}%
+\usetikzlibrary{calc}
+\usepackage{amsmath, amsfonts}
+\usetikzlibrary{calc, positioning, shapes.callouts}
+
+\begin{document}
+
+\begin{tikzpicture}
+\def\abcsize{\normalsize}
+\def\panelH{125 mm}
+\def\panelW{80 mm}
+\tikzstyle{panelstyle} = [draw=white, fill=white, rectangle, align = left, inner sep=0pt, minimum width= \panelW, minimum height = \panelH]
+\node [panelstyle] (panel){};
+\coordinate (corner) at (panel.north west);
+\node (weights) at (corner) [anchor=north west, inner xsep=0pt, inner ysep=0pt] {
+\includegraphics[trim={0.cm 0.2cm 1mm 0cm}, clip, scale=0.94]{fig/weights_grouped.eps}};
+\node at (weights.north west) [anchor= north west, inner xsep=0pt, inner ysep=0pt] {\abcsize{\textbf{(a)}}};
+\coordinate (corner) at (weights.south west);
+\node (taueff) at (corner) [anchor=north west, inner xsep=0pt, inner ysep=1pt] {
+\includegraphics[trim={1mm 2mm 1mm 2mm}, clip, scale=1.04]{fig/T_eff.eps}};
+%
+\node at (taueff.north west) [anchor= north west, inner xsep=0pt, inner ysep=-5pt] {\abcsize{\textbf{(b)}}};
+\end{tikzpicture}
+\end{document}
+
+
+% latex  nvar_diagram.tex
+% dvips figure.dvi -o figure.eps
+
