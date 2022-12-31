@@ -51,3 +51,5 @@ If run correctly, the expected figure would be:
 <p align="center">
 Figure 3. (a) Weight profiles. (b) Effective measurement time
 </p>
+
+[Additional information](additional_info.md)
