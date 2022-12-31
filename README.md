@@ -46,7 +46,7 @@ before running the `main.py`.
 If run correctly, the expected figure would be:
 
 <p align="center">
-  <img width="300" src="figure_for_readme/figure3-eps-converted-to.png" alt>
+  <img width="350" src="figure_for_readme/figure3-eps-converted-to.png" alt>
 </p>
 <p align="center">
 Figure 3. (a) Weight profiles. (b) Effective measurement time
