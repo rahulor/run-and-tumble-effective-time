@@ -2,7 +2,7 @@
 What to expect in this project:
 - The run-and-tumble motion has been implemented using support vector machine (SVM). 
 - The optimal weights for the model are non-zero only for the most recent history of the signal, suggesting an effective measurement time.
-- Necessary data to reproduce figure 3 of the manuscript/article -- "Learning run-and-tumble chemotaxis" [arxive no]
+- Necessary data to reproduce figure 3 of the manuscript/article -- "Learning run-and-tumble chemotaxis" [Rahul O. Ramakrishnan and Benjamin M. Friedrich](https://link_to_arXiv)
 - Source code in Python to reproduce the data
 
 ## Motivation
