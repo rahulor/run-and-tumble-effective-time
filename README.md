@@ -34,6 +34,7 @@ Necessary data has already been provided in the directory `data`
 To reproduce the entire data (this will take several hours), one may start afresh by cleaning the directory `data` and run the main Python script as:
 ```
 python main.py
+python document.py
 ```
 
 If necessary, modify the current settings/parameters  specified in
