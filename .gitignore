@@ -1,0 +1,12 @@
+
+*.pdf
+*.eps
+*.aux
+*.log
+*.gz
+*.dvi
+*.ps
+*.pyc
+**/__pycache__/
+
+# ...except the ones we want

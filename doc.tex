@@ -7,7 +7,7 @@
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{pgfplots}
-\title{\huge Run-and-tumble motion \\ \large weight profile and $T_{\mathrm{eff}}$}
+\title{\huge Run-and-tumble motion \\ \large weight profile and effective measurement time}
 \date{\today}
 \begin{document}
 \include{data/doc_macro}
@@ -45,21 +45,12 @@
 \hfill
 \end{figure}
 
-\section*{weight profiles (all)}
-
 \begin{figure}[H]
 \begin{center}
 \hspace*{-1cm}\includegraphics[scale=1.2]{fig/weights_grid.pdf}
 \end{center}
-\caption{weights}
+\caption{weight profiles}
 \end{figure}
-
-\section*{Accuracy (score)}
-\begin{figure}[H]
-\includegraphics[scale=1.0]{fig/score\figext}
-\end{figure}
-
-\section*{weight profiles (grouped)}
 
 \begin{figure}[H]
 \begin{center}
@@ -68,7 +59,11 @@
 \caption{weights grouped by $\lambda$}
 \end{figure}
 
-\section*{Effective kernel time, $T_\mathrm{eff}$}
+\begin{figure}[H]
+\includegraphics[scale=1.0]{fig/score\figext}
+\end{figure}
+
+\section*{Effective measurement time, $T_\mathrm{eff}$}
 
 \begin{minipage}{0.55\textwidth}
 \begin{figure}[H]
@@ -83,9 +78,10 @@ T_{\mathrm{eff}} = \alpha \, (D_{\mathrm{rot}})^m
 \end{minipage}\hfill
 
 
-\section*{for manuscript | figure3.eps}
+\section*{for manuscript}
 \begin{figure}[H]
 \includegraphics[scale=1.0]{figure3\figext}
+\caption*{Manuscript Figure 3}
 \end{figure}
 \thispagestyle{empty}
 \end{document}
