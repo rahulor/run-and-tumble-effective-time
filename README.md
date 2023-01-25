@@ -53,4 +53,7 @@ If run correctly, the expected figure would be:
 Figure 3. (a) Weight profiles. (b) Effective measurement time
 </p>
 
+### Related
 [Additional information](additional_info.md)
+
+[agent based simulation](https://github.com/rahulor/run-and-tumble-simulation)
