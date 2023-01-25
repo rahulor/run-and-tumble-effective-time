@@ -114,9 +114,11 @@ def signal():
     dt = T_max/memory
     df_signal = pd.read_csv('data/sample_signal.csv', index_col=0)
     signal_all = df_signal.values
+    ytar_all = helper.unpickle_from('data/sample_signal_label')
     nfig = 10
-    signal = signal_all[0:nfig,:]
-    ytar = helper.unpickle_from('data/sample_signal_label')
+    start = 12
+    signal = signal_all[start:start+nfig,:]
+    ytar = ytar_all[start:start+nfig]
     time = np.arange(len(signal[0]))*dt
     args = pd.read_csv('data/sample_args.csv', index_col=0, header=None).squeeze("columns")
     Lambda, D_rot = args['Lambda'], args['D_rot']
@@ -284,7 +286,7 @@ def weights_grouped_by_lambda_all():
         if flag_pick:
             T_eff_pick, flag_pick = T_eff, False
     # last axis
-    ax.legend(loc=(1.01, 1.5), title=r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/s]$', fontsize=8, facecolor='white', 
+    ax.legend(loc=(1.01, 1.5), title=r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/\mathrm{s}]$', fontsize=8, facecolor='white', 
                   framealpha=1)
     ax.set_xlabel(r'$\tau$ [s]', size=10,  rotation=0, labelpad=2)
     # first axis
@@ -371,7 +373,7 @@ def T_eff_vs_Drot_all():
                 va='top', ha='center', size=10)
     ax.text(hpos*1.1, T_max*0.5, r'$\lambda$', color='black', size=8, ha='left', va='center')
     ax.set_ylabel(r'$T_{\mathrm{eff}} $ [s]', rotation=90, labelpad=-2)
-    ax.set_xlabel(r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/s]$', rotation=0, labelpad=2)
+    ax.set_xlabel(r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/\mathrm{s}]$', rotation=0, labelpad=2)
     ax.grid(True, linestyle = '--', linewidth = 0.3)
     ax.legend(loc='lower left', fontsize=8)
     plt.xscale('log')
@@ -436,7 +438,7 @@ def weights_grouped_by_lambda():
          if flag_pick:
              T_eff_pick, flag_pick = T_eff, False
      # last axis
-     ax.legend(loc=('upper right'), title=r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/s]$', fontsize=10, facecolor='white', 
+     ax.legend(loc=('upper right'), title=r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/\mathrm{s}]$', fontsize=10, facecolor='white', 
                    framealpha=1)
      ax.set_xlabel(r'$\tau$ [s]', size=10,  rotation=0, labelpad=2)
      # first axis
@@ -518,7 +520,7 @@ def T_eff_vs_Drot():
                 va='top', ha='center', size=10)
     ax.text(hpos*1.1, T_max*0.5, r'$\lambda$', color='black', size=8, ha='left', va='center')
     ax.set_ylabel(r'$T_{\mathrm{eff}} $ [s]', rotation=90, labelpad=-4)
-    ax.set_xlabel(r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/s]$', rotation=0, labelpad=0)
+    ax.set_xlabel(r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/\mathrm{s}]$', rotation=0, labelpad=0)
     # ax.grid(True, linestyle = '--', linewidth = 0.3)
     ax.minorticks_on()
     ax.legend(loc='lower left', title=LC0text, title_fontsize=5,
@@ -560,7 +562,7 @@ def score_vs_Drot():
                 va='top', ha='center', size=10)
     ax.text(hpos*1.1, 85, r'$\lambda$', color='black', size=8, ha='left', va='center')
     ax.set_ylabel(r'score [$\%$]', rotation=90, labelpad=-2)
-    ax.set_xlabel(r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/s]$', rotation=0, labelpad=2)
+    ax.set_xlabel(r'$D_{\mathrm{rot}}\, [\mathrm{rad}^2/\mathrm{s}]$', rotation=0, labelpad=2)
     ax.legend(loc='lower left', title=r'$\lambda [1/(\mathrm{\mu M s})]$', title_fontsize=6,
               fontsize=6, facecolor='white', framealpha=1)
     ax.set_xscale('symlog', linthresh=0.001)
@@ -575,6 +577,7 @@ def score_vs_Drot():
     
 if __name__ == '__main__':
     pass
+    signal()
                     
     
     
